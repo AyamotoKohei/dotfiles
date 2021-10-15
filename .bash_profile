@@ -1,5 +1,5 @@
 source ~/.bashrc
-source ~/.git-prompt.sh
+source ~/dotfiles/bin/.git-prompt.sh
 
 PS1='\W \[\e[1;32m\]$(__git_ps1 "(%s)")\[\e[0m\] \$ '
 
