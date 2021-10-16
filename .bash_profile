@@ -10,6 +10,13 @@ then
   eval "$(rbenv init -)"
 fi
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1
+then
+  eval "$(pyenv init -)"
+fi
+
 # Ubunts 20.04
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
