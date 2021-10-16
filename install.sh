@@ -2,13 +2,18 @@
 
 DOT_DIR="$HOME/dotfiles"
 
-if if [ ! -d {DOT_DIR} ]; then 
+has() {
+    type "$1" > /dev/null 2>&1
+}
+
+if if [ ! -d {DOT_DIR} ]; then
+    if has "git"; then
+        git clone  
     for f in *;
     do
         [[ "$f" == ".git" ]] && continue
         [[ "$f" == ".gitignore" ]] && continue
-        # use macOS
-        # [[ "$f" == ".DS_Store" ]] && continue
+        [[ "$f" == ".DS_Store" ]] && continue
         [[ "$f" == "README.md" ]] && continue
         [[ "$f" == "install.sh" ]] && continue
 
