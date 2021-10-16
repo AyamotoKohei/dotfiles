@@ -1,3 +1,6 @@
 # dotfiles-linux
-Ubuntu 20.04(WSL2)用のdotfilesです。(macOSは将来的にサポート)
-他のLinux OSはサポートしていません
+macOSとUbuntu 20.04(WSL2)用のdotfilesです。<br>
+他のLinux OSはサポートしていません<br>
+
+## インストールコマンド
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/AyamotoKohei/dotfiles/main/install.sh)"
