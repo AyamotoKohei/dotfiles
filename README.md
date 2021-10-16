@@ -1,4 +1,4 @@
-# dotfiles-linux
+# dotfiles
 macOSとUbuntu 20.04(WSL2)用のdotfilesです。<br>
 他のLinux OSはサポートしていません<br>
 
