@@ -6,7 +6,12 @@ HISTFILESIZE=2000
 shopt -s checkwinsize
 
 # エイリアスの設定
-alias ls='ls --color=auto -lG'
+if [ "$(uname)" = 'Darwin' ]; then
+    alias ls='ls -lG'
+else
+    # eval `dircolors ~/.colorrc`
+    alias ls='ls --color=auto -lG'
+fi
 alias la='ls -A'
 alias nl='nl -b a -s '\'': '\'''
 alias re='history -a ~/.bash_history; exec $SHELL -l'
