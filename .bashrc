@@ -16,8 +16,8 @@ alias la='ls -A'
 alias nl='nl -b a -s '\'': '\'''
 alias re='history -a ~/.bash_history; exec $SHELL -l'
 
-alias gs='git status' # `git status`の確認 
-alias gd='git diff' # `git diff`の確認
+alias gs='git status' # git statusの確認 
+alias gd='git diff' # git diffの確認
 alias ga='git add' # addする
 alias gc='git commit' # commitする
 alias gp='git push' # pushする
