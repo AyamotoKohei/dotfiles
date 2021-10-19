@@ -15,6 +15,7 @@ alias gs='git status' # `git status`の確認
 alias gd='git diff' # `git diff`の確認
 alias ga='git add' # addする
 alias gc='git commit' # commitする
+alias gp='git push' # pushする
 alias gca='git commit --amend' # 前のコミットの編集
 alias glo='git log --oneline' # コミットログを各一行で読む
 alias mkpr='hub pull-request' # PRを書く
