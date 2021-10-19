@@ -7,7 +7,7 @@ shopt -s checkwinsize
 
 # エイリアスの設定
 alias ls='ls --color=auto -lG'
-alias la='ls --color=auto -A'
+alias la='ls -A'
 alias nl='nl -b a -s '\'': '\'''
 alias re='history -a ~/.bash_history; exec $SHELL -l'
 
