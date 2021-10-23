@@ -6,5 +6,5 @@ let g:dein#_ftplugin = ftplugin
 let g:dein#_base_path = '/home/ayamoto/.vim/bundle'
 let g:dein#_runtime_path = '/home/ayamoto/.vim/bundle/.cache/.vimrc/.dein'
 let g:dein#_cache_path = '/home/ayamoto/.vim/bundle/.cache/.vimrc'
-let &runtimepath = '/home/ayamoto/.vim/bundle/repos/github.com/Shougo/dein.vim/,/home/ayamoto/.vim,/var/lib/vim/addons,/etc/vim,/usr/share/vim/vimfiles,/home/ayamoto/.vim/bundle/.cache/.vimrc/.dein,/usr/share/vim/vim81,/home/ayamoto/.vim/bundle/.cache/.vimrc/.dein/after,/usr/share/vim/vimfiles/after,/etc/vim/after,/var/lib/vim/addons/after,/home/ayamoto/.vim/after'
+let &runtimepath = '/home/ayamoto/.vim/bundle/repos/github.com/Shougo/dein.vim/,/home/ayamoto/.vim,/var/lib/vim/addons,/etc/vim,/usr/share/vim/vimfiles,/home/ayamoto/.vim/bundle/repos/github.com/Shougo/dein.vim,/home/ayamoto/.vim/bundle/.cache/.vimrc/.dein,/usr/share/vim/vim81,/home/ayamoto/.vim/bundle/.cache/.vimrc/.dein/after,/usr/share/vim/vimfiles/after,/etc/vim/after,/var/lib/vim/addons/after,/home/ayamoto/.vim/after'
 filetype off
