@@ -6,3 +6,6 @@ repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'tomasr/molokai'

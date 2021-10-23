@@ -52,7 +52,8 @@ nnoremap j gj     " 折り返し時に表示行単位での移動できるよう
 nnoremap k gk
 syntax enable     " シンタックスハイライトの有効化
 set background=dark
-colorscheme iceberg
+" colorscheme iceberg
+colorscheme molokai
 
 " ==========================
 " Tab系の設定
