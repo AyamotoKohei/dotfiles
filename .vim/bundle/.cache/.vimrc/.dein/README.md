@@ -1,175 +1,64 @@
-# ddc.vim
+# async.vim
+normalize async job control api for vim and neovim
 
-Note: It is still beta version. But it is almost stable.
-
-> Dark deno-powered completion framework for neovim/Vim8
-
-If you don't want to configure plugins, you don't have to use the plugin. It
-does not work with zero configuration. You can use other plugins.
-
-[![Doc](https://img.shields.io/badge/doc-%3Ah%20ddc-orange.svg)](doc/ddc.txt)
-
-Please read [help](doc/ddc.txt) for details.
-
-Ddc is the abbreviation of "dark deno-powered completion". It provides an
-extensible and asynchronous completion framework for neovim/Vim8.
-
-Note: I have created
-[Japanese article](https://zenn.dev/shougo/articles/ddc-vim-beta) for ddc.vim.
-After that I have created the next article
-[Japanese article](https://zenn.dev/shougo/articles/ddc-vim-pum-vim) for both
-ddc.vim and pum.vim recently. You can read them by translation service.
-
-The development is supported by
-[github sponsors](https://github.com/sponsors/Shougo/). Thank you!
-
-<!-- vim-markdown-toc GFM -->
-
-- [Introduction](#introduction)
-- [Install](#install)
-  - [Requirements](#requirements)
-- [Configuration](#configuration)
-- [Screenshots](#screenshots)
-
-<!-- vim-markdown-toc -->
-
-## Introduction
-
-I have chosen denops.vim framework to create new plugin. Because denops.vim is
-better than neovim Python interface.
-
-- Easy to setup
-- Minimal dependency
-- Stability
-- neovim/Vim8 compatibility
-- Speed
-- Library
-- Easy to hack
-
-## Install
-
-**Note:** Ddc.vim requires Neovim (0.5.0+ and of course, **latest** is
-recommended) or Vim 8.2.0662. See [requirements](#requirements) if you aren't
-sure whether you have this.
-
-For vim-plug
-
-```viml
-call plug#begin()
-
-Plug 'Shougo/ddc.vim'
-Plug 'vim-denops/denops.vim'
-
-" Install your sources
-"Plug 'Shougo/ddc-around'
-
-" Install your filters
-"Plug 'Shougo/ddc-matcher_head'
-"Plug 'Shougo/ddc-sorter_rank'
-
-call plug#end()
-```
-
-For dein.vim
-
-```viml
-call dein#begin()
-
-call dein#add('Shougo/ddc.vim')
-call dein#add('vim-denops/denops.vim')
-
-" Install your sources
-"call dein#add('Shougo/ddc-around')
-
-" Install your filters
-"call dein#add('Shougo/ddc-matcher_head')
-"call dein#add('Shougo/ddc-sorter_rank')
-
-call dein#end()
-```
-
-**Note:** Ddc.vim does not include any sources and filters. You must install
-them you want manually. You can search ddc plugins(sources and filters) from
-[here](https://github.com/topics/ddc-vim).
-
-### Requirements
-
-Ddc.vim requires both Deno and denops.vim.
-
-- <https://deno.land/>
-- <https://github.com/vim-denops/denops.vim>
-
-## Configuration
+## sample usage
 
 ```vim
-" Customize global settings
-" Use around source.
-" https://github.com/Shougo/ddc-around
-call ddc#custom#patch_global('sources', ['around'])
+function! s:handler(job_id, data, event_type)
+    echo a:job_id . ' ' . a:event_type
+    echo join(a:data, "\n")
+endfunction
 
-" Use matcher_head and sorter_rank.
-" https://github.com/Shougo/ddc-matcher_head
-" https://github.com/Shougo/ddc-sorter_rank
-call ddc#custom#patch_global('sourceOptions', {
-      \ '_': {
-      \   'matchers': ['matcher_head'],
-      \   'sorters': ['sorter_rank']},
-      \ })
+if has('win32') || has('win64')
+    let argv = ['cmd', '/c', 'dir c:\ /b']
+else
+    let argv = ['bash', '-c', 'ls']
+endif
 
-" Change source options
-call ddc#custom#patch_global('sourceOptions', {
-      \ 'around': {'mark': 'A'},
-      \ })
-call ddc#custom#patch_global('sourceParams', {
-      \ 'around': {'maxSize': 500},
-      \ })
+let jobid = async#job#start(argv, {
+    \ 'on_stdout': function('s:handler'),
+    \ 'on_stderr': function('s:handler'),
+    \ 'on_exit': function('s:handler'),
+\ })
 
-" Customize settings on a filetype
-call ddc#custom#patch_filetype(['c', 'cpp'], 'sources', ['around', 'clangd'])
-call ddc#custom#patch_filetype(['c', 'cpp'], 'sourceOptions', {
-      \ 'clangd': {'mark': 'C'},
-      \ })
-call ddc#custom#patch_filetype('markdown', 'sourceParams', {
-      \ 'around': {'maxSize': 100},
-      \ })
+if jobid > 0
+    echom 'job started'
+else
+    echom 'job failed to start'
+endif
 
-" Mappings
+" If you want to get the process id of the job
+let pid = async#job#pid(jobid)
 
-" <TAB>: completion.
-inoremap <silent><expr> <TAB>
-\ pumvisible() ? '<C-n>' :
-\ (col('.') <= 1 <Bar><Bar> getline('.')[col('.') - 2] =~# '\s') ?
-\ '<TAB>' : ddc#map#manual_complete()
+" If you want to wait the job:
+call async#job#wait([jobid], 5000)  " timeout: 5 sec
 
-" <S-TAB>: completion back.
-inoremap <expr><S-TAB>  pumvisible() ? '<C-p>' : '<C-h>'
-
-" Use ddc.
-call ddc#enable()
+" If you want to stop the job:
+call async#job#stop(jobid)
 ```
 
-See `:help ddc-options` for a complete list of options.
+## APIs
 
-## Screenshots
+APIs are based on neovim's job control APIs.
 
-Please see: https://github.com/Shougo/ddc.vim/issues/32
+* [job-control](https://neovim.io/doc/user/job_control.html#job-control)
+* [jobsend()](https://neovim.io/doc/user/eval.html#jobsend%28%29)
+* [jobstart()](https://neovim.io/doc/user/eval.html#jobstart%28%29)
+* [jobstop()](https://neovim.io/doc/user/eval.html#jobstop%28%29)
+* [jobwait()](https://neovim.io/doc/user/eval.html#jobwait%28%29)
+* [jobpid()](https://neovim.io/doc/user/eval.html#jobpid%28%29)
 
-![nvim-lsp](https://user-images.githubusercontent.com/41495/129931010-258d3917-7379-4b40-b3cc-2313c9fbe600.png)
+## Embedding
 
-![command line completion](https://user-images.githubusercontent.com/41495/135711007-8c24c606-2c5d-41f5-a445-dce0127aa97a.png)
+Async.vim can be either embedded with other plugins or be used as an external plugin.
+If you want to embed run the following vim command.
 
-## Plans
+```vim
+:AsyncEmbed path=./autoload/myplugin/job.vim namespace=myplugin#job
+```
 
-- [x] Custom ddc options support
-- [x] Custom source options support
-- [x] Implement source orders
-- [x] Implement sorter_rank
-- [x] virtual text completion mode
-- [x] Split sources and filters
-- [x] Implement LSP source
-- [x] Manual completion support
-- [x] Implement converter_remove_overlap
-- [x] iskeyword support
-- [x] Sources/Filters auto loading without registers
-- [x] Original popup window implementation
-- [x] Command line completion
+## Todos
+* Fallback to sync `system()` calls in vim that doesn't support `job`
+* `job_stop` and `job_send` is treated as noop when using `system()`
+* `on_stderr` doesn't work when using `system()`
+* Fallback to python/ruby threads and vimproc instead of using `system()` for better compatibility (PRs welcome!!!)

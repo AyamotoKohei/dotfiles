@@ -8,10 +8,23 @@ repo = 'itchyny/lightline.vim'
 repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
-repo = 'tomasr/molokai'
-
-[[plugins]]
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
+
+# vim-lsp plugins
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'

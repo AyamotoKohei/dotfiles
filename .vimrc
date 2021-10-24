@@ -76,3 +76,30 @@ set incsearch     " 検索文字列入力時に順次対象文字列にヒット
 set wrapscan      " 検索時に最後まで行ったら最初に戻る
 set hlsearch      " 検索語をハイライト表示
 nmap <Esc><Esc> :nohlsearch<CR><Esc>  " ESC連打でハイライト解除
+
+"--------------------------------------------
+" vim-lsp settings
+"--------------------------------------------
+nmap gf :LspDefinition<CR> 
+nmap gt :LspTypeDefinition<CR>
+nmap gj :LspDeclaration<CR>
+nmap gi :LspImplementation<CR>
+nmap gr :LspReferences<CR>
+nmap gF <C-o> " back from definition 
+nmap gn :LspRename<CR>
+
+"let g:lsp_settings_filetype_go = ['gopls']
+"let g:lsp_diagnostics_enabled = 0 " disable linter error popups
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_text_edit_enabled = 1
+
+"--------------------------------------------
+" asyncomplete settings
+"--------------------------------------------
+let g:asyncomplete_auto_popup = 1
+
+let g:asyncomplete_popup_delay = 200 
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <expr> <CR>    pumvisible() ? "\<C-y>\<CR>" : "\<CR>"
+" imap <c-space> <Plug>(asyncomplete_force_refresh)

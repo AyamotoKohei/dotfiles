@@ -1,22 +1,11 @@
-TS=$(shell find denops -name "*.ts")
-TSTEST=$(shell grep -rl "Deno.test" denops)
+.PHONY: shellcheck
+shellcheck:
+	find ./installer -name "*.sh" -type f -print0 | xargs -0 shellcheck
 
+.PHONY: shellcheck-docker
+shellcheck-docker:
+	find ./installer -name "*.sh" -type f -print0 | xargs -0 docker run -t --rm -v "${PWD}:/mnt" koalaman/shellcheck:stable
 
-lint: lint/vim lint/deno
-
-lint/vim:
-	vint --version
-	vint autoload
-
-lint/deno:
-	deno fmt --check denops
-	deno test --unstable --no-run -A ${TS}
-	deno lint --unstable denops
-
-test:
-	deno test --unstable -A ${TSTEST}
-
-format:
-	deno fmt denops README.md .github
-
-.PHONY: lint lint/vim lint/deno test format
+.PHONY: shfmt
+shfmt:
+	find ./installer -name "*.sh" -type f -print0 | xargs -0 shfmt -w

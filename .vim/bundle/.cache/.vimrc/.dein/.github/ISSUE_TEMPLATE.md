@@ -1,36 +1,10 @@
-**Warning: I will close the issue without the minimal init.vim and the
-reproduction instructions.**
+<!-- Thank you for using Iceberg! -->
+<!-- Make sure your environment before submitting a issue. -->
+Environment:
+- OS
+- Vim (`:version`)
+- Terminal
 
-# Problems summary
-
-## Expected
-
-## Environment Information
-
-- ddc.vim version (SHA1):
-
-- denops.vim version (SHA1):
-
-- deno version(`deno -V` output):
-
-- OS:
-
-- neovim/Vim `:version` output:
-
-- `:checkhealth` or `:CheckHealth` result(neovim only):
-
-## Provide a minimal init.vim/vimrc with less than 50 lines (Required!)
-
-```vim
-" Your minimal init.vim/vimrc
-set runtimepath+=~/path/to/ddc.vim/
-call ddc#enable()
-```
-
-## How to reproduce the problem from neovim/Vim startup (Required!)
-
-1. foo
-2. bar
-3. baz
-
-## Screenshot (if possible)
+If you have a trouble with coloration and are using Vim/Neovim with terminal:
+- [ ] Does your Vim support full colors? (`:set termguicolors`)
+- [ ] Does your terminal support full colors? (e.g. Terminal.app doesn't support it)
