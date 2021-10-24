@@ -37,6 +37,7 @@ set hidden      " バッファが編集中でもその他のファイルを開�
 set showcmd     " 入力中のコマンドをステータスに表示する
 set backspace=indent,eol,start  " 挿入モードでバックスペースで削除できるようにする
 set ambiwidth=double  " 全角文字専用の設定
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " ==========================
 " 表示設定
@@ -48,17 +49,20 @@ set smartindent   " インデントはスマートインデント
 set showmatch     " 括弧入力時の対応する括弧を表示
 set laststatus=2  " ステータスラインを常に表示
 set wildmode=list:longest  " コマンドラインの補完
+set cursorline    " カーソルラインをハイライト
 nnoremap j gj     " 折り返し時に表示行単位での移動できるようにする
 nnoremap k gk
 syntax enable     " シンタックスハイライトの有効化
 set background=dark
-" colorscheme iceberg
-colorscheme molokai
+colorscheme iceberg
+let g:lightline = {
+      \ 'colorscheme': 'iceberg'
+      \ }
 
 " ==========================
 " Tab系の設定
 " ==========================
-set list listchars=tab:\▸\-  " 不可視文字を可視化(タブが「▸-」と表示される)
+set list listchars=tab:\▸\-,trail:-,eol:↲ " 不可視文字を可視化
 set expandtab     " Tab文字を半角スペースにする
 set tabstop=4     " 行頭以外のTab文字の表示幅（スペースいくつ分）
 set shiftwidth=4  " 行頭でのTab文字の表示幅
