@@ -6,10 +6,10 @@ has() {
     type "$1" > /dev/null 2>&1
 }
 
-if if [ ! -d {DOT_DIR} ]; then
-    if type "git"> /dev/null 2>&1; then
+if [ ! -d {DOT_DIR} ]; then
+    if has "git"; then
         git clone https://github.com/AyamotoKohei/dotfiles.git ${DOT_DIR}
-    elif type "curl"> /dev/null 2>&1 || type "wget"> /dev/null 2>&1; then
+    elif has "curl" || has "wget"; then
         TARBALL="https://github.com/AyamotoKohei/dotfiles/archive/refs/heads/main.tar.gz"
         if type "curl" /dev/null 2>&1; then
             curl -L ${TARBALL} -o main.tar.gz
