@@ -11,7 +11,7 @@ if [ ! -d {DOT_DIR} ]; then
         git clone https://github.com/AyamotoKohei/dotfiles.git ${DOT_DIR}
     elif has "curl" || has "wget"; then
         TARBALL="https://github.com/AyamotoKohei/dotfiles/archive/refs/heads/main.tar.gz"
-        if type "curl" /dev/null 2>&1; then
+        if has "curl"; then
             curl -L ${TARBALL} -o main.tar.gz
         else
             wget ${TARBALL}
