@@ -42,5 +42,3 @@ else
     echo "dotfiles already exists"
     exit 1
 fi
-
-exit 1
