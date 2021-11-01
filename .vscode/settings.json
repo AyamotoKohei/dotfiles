@@ -1,0 +1,9 @@
+{
+    "workbench.colorTheme": "Iceberg",
+    "window.zoomLevel": 1,
+    "editor.renderWhitespace": "boundary",
+    "files.autoSave": "onWindowChange",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
+}
