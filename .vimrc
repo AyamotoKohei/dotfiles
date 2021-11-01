@@ -38,6 +38,13 @@ set showcmd     " 入力中のコマンドをステータスに表示する
 set backspace=indent,eol,start  " 挿入モードでバックスペースで削除できるようにする
 set ambiwidth=double  " 全角文字専用の設定
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+inoremap { {}<LEFT>
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+inoremap ` ``<LEFT>
 
 " ==========================
 " 表示設定
@@ -58,13 +65,6 @@ colorscheme iceberg
 let g:lightline = {
       \ 'colorscheme': 'iceberg'
       \ }
-inoremap { {}<LEFT>
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
-inoremap ` ``<LEFT>
 
 " ==========================
 " Tab系の設定
