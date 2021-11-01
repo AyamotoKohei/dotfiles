@@ -9,6 +9,7 @@ shopt -s checkwinsize
 if [ "$(uname)" = 'Darwin' ]; then
     alias ls='ls -lG'
     alias tree='tree -a'
+    alias brew="PATH=/opt/homebrew/bin brew"
 else
     # eval `dircolors ~/.colorrc`
     alias ls='ls --color=auto -lG'
@@ -32,6 +33,3 @@ alias glo='git log --oneline' # コミットログを各一行で読む
 alias mkpr='hub pull-request' # PRを書く
 alias prs='ghi | grep ↑' # 現在のレポジトリのPR取得
 
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
