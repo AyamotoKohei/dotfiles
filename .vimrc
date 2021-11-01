@@ -59,6 +59,7 @@ let g:lightline = {
       \ 'colorscheme': 'iceberg'
       \ }
 inoremap { {}<LEFT>
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
