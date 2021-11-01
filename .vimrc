@@ -58,6 +58,12 @@ colorscheme iceberg
 let g:lightline = {
       \ 'colorscheme': 'iceberg'
       \ }
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+inoremap ` ``<LEFT>
 
 " ==========================
 " Tab系の設定
