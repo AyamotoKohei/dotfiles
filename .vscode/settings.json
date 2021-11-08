@@ -7,5 +7,9 @@
         "editor.defaultFormatter": "vscode.typescript-language-features",
         "editor.insertSpaces": true,
         "editor.tabSize": 2
+    },
+    "[html]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
     }
 }
