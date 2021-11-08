@@ -57,8 +57,8 @@ set showmatch     " 括弧入力時の対応する括弧を表示
 set laststatus=2  " ステータスラインを常に表示
 set wildmode=list:longest  " コマンドラインの補完
 set cursorline    " カーソルラインをハイライト
-nnoremap j gj     " 折り返し時に表示行単位での移動できるようにする
-nnoremap k gk
+"nnoremap j gj     " 折り返し時に表示行単位での移動できるようにする
+"nnoremap k gk
 syntax enable     " シンタックスハイライトの有効化
 set background=dark
 colorscheme iceberg
