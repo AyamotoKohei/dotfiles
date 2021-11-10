@@ -2,7 +2,21 @@
     "workbench.colorTheme": "Iceberg",
     "window.zoomLevel": 1,
     "editor.renderWhitespace": "boundary",
-    "files.autoSave": "onWindowChange",
+    "editor.suggestSelection": "first",
+    "editor.renderControlCharacters": true,
+    "editor.dragAndDrop": false,
+    "editor.wordWrap": "on",
+    "editor.minimap.maxColumn": 90,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.size": "fit",
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "explorer.incrementalNaming": "smart",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features",
         "editor.insertSpaces": true,
@@ -11,5 +25,8 @@
     "[html]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 2
-    }
+    },
+    "[csv]": {
+        "editor.wordWarp": false,
+    },
 }
