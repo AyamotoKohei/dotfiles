@@ -1,6 +1,5 @@
 {
     "workbench.colorTheme": "Iceberg",
-    "window.zoomLevel": 1,
     "editor.renderWhitespace": "boundary",
     "editor.suggestSelection": "first",
     "editor.renderControlCharacters": true,
@@ -18,15 +17,27 @@
     "explorer.incrementalNaming": "smart",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.insertSpaces": true,
         "editor.tabSize": 2
     },
     "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.insertSpaces": true,
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+    },
+    "[css]": {
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
     },
     "[csv]": {
-        "editor.wordWarp": false,
+        "editor.wordWarp": "off",
     },
 }
