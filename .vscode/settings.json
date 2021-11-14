@@ -40,4 +40,5 @@
     "[csv]": {
         "editor.wordWarp": "off",
     },
+    "explorer.confirmDragAndDrop": false,
 }
