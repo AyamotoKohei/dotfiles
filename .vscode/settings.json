@@ -10,11 +10,18 @@
     "editor.minimap.size": "fit",
     "editor.formatOnType": true,
     "editor.formatOnPaste": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+    },
+    "editor.formatOnSave": false,
+    "eslint.packageManager": "yarn",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
     "files.autoSave": "onFocusChange",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "explorer.incrementalNaming": "smart",
+    "explorer.confirmDragAndDrop": false,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -40,5 +47,4 @@
     "[csv]": {
         "editor.wordWarp": "off",
     },
-    "explorer.confirmDragAndDrop": false,
 }
