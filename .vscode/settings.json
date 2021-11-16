@@ -10,8 +10,12 @@
     "editor.minimap.size": "fit",
     "editor.formatOnType": true,
     "editor.formatOnPaste": true,
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true,
     },
     "editor.formatOnSave": false,
     "eslint.packageManager": "yarn",
@@ -60,6 +64,8 @@
     },
     "[graphql]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
         "editor.formatOnSave": true,
     },
     "[json]": {
