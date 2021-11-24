@@ -17,6 +17,10 @@
         "source.fixAll.eslint": true,
         "source.fixAll.stylelint": true,
     },
+    "editor.lineNumbers": "on",
+    "editor.rulers": [
+        80
+    ],
     "editor.formatOnSave": false,
     "eslint.packageManager": "yarn",
     "typescript.tsdk": "./node_modules/typescript/lib",
@@ -81,4 +85,5 @@
     "[csv]": {
         "editor.wordWarp": "off",
     },
+    "workbench.iconTheme": "vscode-icons",
 }
