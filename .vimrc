@@ -85,7 +85,7 @@ set hlsearch      " 検索語をハイライト表示
 nmap <Esc><Esc> :nohlsearch<CR><Esc>  " ESC連打でハイライト解除
 
 "--------------------------------------------
-" vim-lsp settings
+" vim-lspの設定
 "--------------------------------------------
 nmap gf :LspDefinition<CR> 
 nmap gt :LspTypeDefinition<CR>
@@ -101,7 +101,7 @@ let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_text_edit_enabled = 1
 
 "--------------------------------------------
-" asyncomplete settings
+" asyncompleteの設定
 "--------------------------------------------
 let g:asyncomplete_auto_popup = 1
 
