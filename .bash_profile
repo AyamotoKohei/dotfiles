@@ -1,6 +1,7 @@
 source ~/.bashrc
 source ~/dotfiles/bin/.git-prompt.sh
 
+# 表示設定
 PS1='\W \[\e[1;32m\]$(__git_ps1 "(%s)")\[\e[0m\] \$ '
 
 # Homebrewのパスを通すための設定
