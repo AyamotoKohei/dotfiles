@@ -88,4 +88,5 @@
     "workbench.iconTheme": "vscode-icons",
     "bracket-pair-colorizer-2.depreciation-notice": false,
     "bracketPairColorizer.depreciation-notice": false,
+    "vsicons.dontShowNewVersionMessage": true,
 }
