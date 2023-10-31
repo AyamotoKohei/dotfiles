@@ -16,7 +16,27 @@ require("lazy").setup({
   -- iceberg
   {'cocopon/iceberg.vim', config=function() vim.cmd([[colorscheme iceberg]]) end,},
 	-- Fern
-	{'lambdalisue/fern.vim'},
+  'nvim-tree/nvim-web-devicons',
+	{
+    'lambdalisue/fern.vim',
+	  lazy = false, 
+		priority = 1000,
+		config = function()
+      vim.g["fern#renderer"] = "nvim-web-devicons"
+			vim.g["fern#default_hidden"]= 1
+			vim.cmd([[
+        augroup my-glyph-palette
+        autocmd! *
+        autocmd FileType fern call glyph_palette#apply()
+        autocmd FileType nerdtree,startify call glyph_palette#apply()
+        augroup END
+      ]])
+    end,
+		},
+	'lambdalisue/glyph-palette.vim',
+	{'TheLeoP/fern-renderer-web-devicons.nvim',dependencies = {'nvim-web-devicons'}},
+  --Syntax Highlight
+  {'nvim-treesitter/nvim-treesitter'},
 })
 
 vim.opt.fileencoding = "utf-8"
