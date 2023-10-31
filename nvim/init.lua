@@ -15,6 +15,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   -- iceberg
   {'cocopon/iceberg.vim', config=function() vim.cmd([[colorscheme iceberg]]) end,},
+	-- Fern
+	{'lambdalisue/fern.vim'},
 })
 
 vim.opt.fileencoding = "utf-8"
