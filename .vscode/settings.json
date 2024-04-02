@@ -14,8 +14,8 @@
     "less.validate": false,
     "scss.validate": false,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true,
-        "source.fixAll.stylelint": true,
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.stylelint": "explicit"
     },
     "editor.lineNumbers": "on",
     "editor.rulers": [
@@ -89,4 +89,5 @@
     "bracket-pair-colorizer-2.depreciation-notice": false,
     "bracketPairColorizer.depreciation-notice": false,
     "vsicons.dontShowNewVersionMessage": true,
+    "files.eol": "\n",
 }
