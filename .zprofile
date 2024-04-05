@@ -6,6 +6,7 @@ alias la='ls -A'
 alias nl='nl -b a -s '\'': '\'''
 alias re='exec $SHELL -l'
 alias net='networkQuality'
+alias vim='nvim'
 
 alias gs='git status' # git statusの確認
 alias gd='git diff' # git diffの確認
