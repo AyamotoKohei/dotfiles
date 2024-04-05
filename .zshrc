@@ -37,3 +37,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# GitHub CLIのコマンド補完の設定
+eval "$(gh completion -s zsh)"
+
