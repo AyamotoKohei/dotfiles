@@ -41,3 +41,5 @@ zinit light zsh-users/zsh-syntax-highlighting
 # GitHub CLIのコマンド補完の設定
 eval "$(gh completion -s zsh)"
 
+# asdfの設定
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
