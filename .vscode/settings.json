@@ -92,4 +92,6 @@
     "vsicons.dontShowNewVersionMessage": true,
     "files.eol": "\n",
     "workbench.startupEditor": "none",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
 }
