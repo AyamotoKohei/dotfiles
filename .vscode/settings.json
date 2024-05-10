@@ -94,4 +94,5 @@
     "workbench.startupEditor": "none",
     "diffEditor.ignoreTrimWhitespace": false,
     "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "editor.fontSize": 13,
 }
