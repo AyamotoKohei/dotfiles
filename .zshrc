@@ -24,7 +24,15 @@ zinit light zsh-users/zsh-completions
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# powerlevel10k の設定ファイルの読み込み先をアプリごとに変更
+if [[ $TERM_PROGRAM = "WarpTerminal" ]]; then
+  # Warp
+  source ~/dotfiles/p10k/warp/.p10k.zsh
+else
+  # Terminal
+  source ~/dotfiles/p10k/terminal/.p10k.zsh
+fi
 
 # Gitのタブ補完を有効化する
 autoload -Uz compinit && compinit
