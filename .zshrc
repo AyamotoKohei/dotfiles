@@ -37,14 +37,6 @@ fi
 # Gitのタブ補完を有効化する
 autoload -Uz compinit && compinit
 
-# rbenv の設定
-export RBENV_ROOT="$HOME/.rbenv"
-export PATH="$RBENV_ROOT/bin:$PATH"
-if command -v rbenv 1>/dev/null 2>&1
-then
-  eval "$(rbenv init -)"
-fi
-
 # GitHub CLIのコマンド補完の設定
 eval "$(gh completion -s zsh)"
 

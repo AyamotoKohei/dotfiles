@@ -12,8 +12,6 @@ brew "git"
 brew "gnupg"
 brew "neovim"
 brew "postgresql@16", restart_service: true
-brew "pyenv"
-brew "rbenv"
 brew "sl"
 brew "subversion"
 brew "superfile"
