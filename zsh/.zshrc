@@ -28,10 +28,10 @@ fi
 # powerlevel10k の設定ファイルの読み込み先をアプリごとに変更
 if [[ $TERM_PROGRAM = "WarpTerminal" ]]; then
   # Warp
-  source ~/dotfiles/p10k/warp/.p10k.zsh
+  source ~/dotfiles/zsh/p10k/warp/.p10k.zsh
 else
   # Terminal
-  source ~/dotfiles/p10k/terminal/.p10k.zsh
+  source ~/dotfiles/zsh/p10k/terminal/.p10k.zsh
 fi
 
 # Gitのタブ補完を有効化する
