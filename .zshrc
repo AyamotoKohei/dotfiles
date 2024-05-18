@@ -45,14 +45,6 @@ then
   eval "$(rbenv init -)"
 fi
 
-# pyenv の設定
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/shims:$PATH"
-if command -v pyenv 1>/dev/null 2>&1
-then
-  eval "$(pyenv init -)"
-fi
-
 # GitHub CLIのコマンド補完の設定
 eval "$(gh completion -s zsh)"
 
