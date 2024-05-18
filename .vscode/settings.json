@@ -94,4 +94,18 @@
     "workbench.startupEditor": "none",
     "diffEditor.ignoreTrimWhitespace": false,
     "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "editor.fontSize": 13,
+    "files.associations": {
+        ".env*": "dotenv"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "keyword.other.dotenv",
+                "settings": {
+                    "foreground": "#FF000000"
+                }
+            }
+        ]
+    },
 }
