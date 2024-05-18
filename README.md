@@ -2,12 +2,13 @@
 macOSとUbuntu 20.04(WSL2)用のdotfilesです<br>
 他のLinux OSはサポートしていません<br>
 
-## インストールコマンド
+## インストール手順
+<!-- ここにインストール手順を記載する -->
 ```script
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/AyamotoKohei/dotfiles/main/install.sh)"
+ln -s ~/dotfiles/.Brewfile ~/.Brewfile
 ```
 
-## neovimの設定をシンボリック化
+## neovim の設定をシンボリック化
 ```script
 ln -s ~/dotfiles/nvim ~/.config
 ```
