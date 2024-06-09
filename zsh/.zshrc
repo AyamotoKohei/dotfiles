@@ -1,6 +1,9 @@
 # Shell 再起動時にエイリアスを読み込んで欲しいので記述
 source ~/.zprofile
 
+# バックグラウンドで ssh-agent を開始
+eval "$(ssh-agent -s)"
+
 # Homebrew のパスを通す
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"

@@ -1,5 +1,6 @@
 {
     "workbench.colorTheme": "Iceberg",
+    "editor.fontSize": 13,
     "editor.renderWhitespace": "boundary",
     "editor.suggestSelection": "first",
     "editor.renderControlCharacters": true,
@@ -22,8 +23,8 @@
         80
     ],
     "editor.formatOnSave": false,
-    "eslint.packageManager": "yarn",
     "typescript.tsdk": "./node_modules/typescript/lib",
+    "files.eol": "\n",
     "files.autoSave": "onFocusChange",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -83,18 +84,11 @@
         "editor.tabSize": 2,
         "editor.formatOnSave": true,
     },
-    "[csv]": {
-        "editor.wordWarp": "off",
-    },
-    "workbench.iconTheme": "vscode-icons",
-    "bracket-pair-colorizer-2.depreciation-notice": false,
-    "bracketPairColorizer.depreciation-notice": false,
+    "workbench.iconTheme": "material-icon-theme",
     "vsicons.dontShowNewVersionMessage": true,
-    "files.eol": "\n",
     "workbench.startupEditor": "none",
     "diffEditor.ignoreTrimWhitespace": false,
     "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-    "editor.fontSize": 13,
     "files.associations": {
         ".env*": "dotenv"
     },
@@ -108,4 +102,6 @@
             }
         ]
     },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "markdown-pdf.headerTemplate": "<span class='title' style='display: none;'></span>",
 }

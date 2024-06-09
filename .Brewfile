@@ -9,6 +9,7 @@ brew "gawk"
 brew "gh"
 brew "git"
 brew "gnupg"
+brew "mas"
 brew "neovim"
 brew "postgresql@16", restart_service: true
 brew "sl"
@@ -21,6 +22,7 @@ brew "heroku/brew/heroku"
 cask "appcleaner"
 cask "bitwarden"
 cask "docker"
+cask "figma"
 cask "font-hack-nerd-font"
 cask "google-chrome"
 cask "google-drive"
@@ -28,6 +30,7 @@ cask "google-japanese-ime"
 cask "karabiner-elements"
 cask "notion"
 cask "pgadmin4"
+cask "postman"
 cask "rectangle"
 cask "slack"
 cask "spotify"
@@ -35,6 +38,23 @@ cask "the-unarchiver"
 cask "visual-studio-code"
 cask "warp"
 cask "zoom"
+mas "GarageBand", id: 682658836
+mas "GitGrass", id: 1501139279
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
+mas "MachineProfile", id: 530194517
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft OneNote", id: 784801555
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "Numbers", id: 409203825
+mas "OneDrive", id: 823766827
+mas "Pages", id: 409201541
+mas "Prime Video", id: 545519333
+mas "Scaler", id: 1612708557
+vscode "anbuselvanrocky.bootstrap5-vscode"
 vscode "bierner.emojisense"
 vscode "bierner.markdown-checkbox"
 vscode "bierner.markdown-emoji"
@@ -45,18 +65,28 @@ vscode "cocopon.iceberg-theme"
 vscode "dbaeumer.vscode-eslint"
 vscode "donjayamanne.githistory"
 vscode "dsznajder.es7-react-js-snippets"
+vscode "ecmel.vscode-html-css"
+vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "formulahendry.auto-rename-tag"
 vscode "mariusalchimavicius.json-to-ts"
+vscode "mechatroner.rainbow-csv"
 vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-ceintl.vscode-language-pack-ja"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode.live-server"
+vscode "ms-vsliveshare.vsliveshare"
 vscode "naumovs.color-highlight"
 vscode "oderwat.indent-rainbow"
+vscode "pkief.material-icon-theme"
 vscode "saikou9901.evilinspector"
+vscode "streetsidesoftware.code-spell-checker"
 vscode "stylelint.vscode-stylelint"
+vscode "tomoki1207.pdf"
 vscode "visualstudioexptteam.intellicode-api-usage-examples"
 vscode "visualstudioexptteam.vscodeintellicode"
 vscode "vscode-icons-team.vscode-icons"
+vscode "xabikos.javascriptsnippets"
+vscode "yusukehirao.vscode-markuplint"
+vscode "yzane.markdown-pdf"

@@ -26,17 +26,38 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 $ ln -s ~/dotfiles/.Brewfile ~/.Brewfile
 ```
 
-5. neovim の設定ファイルのシンボリックリンクを貼る
+5. Homebrew を bundle コマンドを使用して、アプリケーションのインストールを行う
 ```bash
-$ ln -s ~/dotfiles/nvim ~/.config
+$ brew bundle --global
 ```
+
+6. その他のファイルに関しても、適宜シンボリックリンクを貼る
+```bash
+# Neovim の設定ファイル
+$ ln -s ~/dotfiles/nvim ~/.config
+
+# VSCode の設定ファイル
+$ rm -rf ~/Library/Application\ Support/Code/User/settings.json
+$ ln -s  ~/dotfiles/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+
+# Warp テーマの有効化
+```
+
+以上。
+
 <!--
 ## 各種アプリケーションの設定
 ### macOS
 ### ターミナル
 ### Warp -->
 
-## .Brewfile の更新
+## 各種アプリケーションの設定
+
+### .Brewfile の更新
 ```bash
 $ brew bundle dump --global --force
 ```
+
+### GitHub の SSH 接続
+下記ドキュメントを参考に GitHub との SSH 接続を行う。
+- https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys

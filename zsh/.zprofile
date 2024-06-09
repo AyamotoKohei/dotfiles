@@ -1,10 +1,8 @@
 # エイリアスの設定
 alias ls='ls -lG'
 alias tree='tree -a'
-# alias brew="PATH=/opt/homebrew/bin brew"
 alias la='ls -A'
 alias nl='nl -b a -s '\'': '\'''
-# alias re='exec $SHELL -l'
 alias re='exec zsh'
 alias net='networkQuality'
 alias vim='nvim'
