@@ -41,6 +41,7 @@ $ rm -rf ~/Library/Application\ Support/Code/User/settings.json
 $ ln -s  ~/dotfiles/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 # Warp テーマの有効化
+$ ln -s ~/dotfiles/.warp ~/.warp
 ```
 
 以上。
