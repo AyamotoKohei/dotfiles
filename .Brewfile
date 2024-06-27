@@ -12,6 +12,7 @@ brew "gnupg"
 brew "mas"
 brew "neovim"
 brew "postgresql@16", restart_service: true
+brew "postgrest"
 brew "sl"
 brew "subversion"
 brew "superfile"
@@ -53,8 +54,8 @@ mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
+mas "Parallels System Monitor", id: 6475592380
 mas "Prime Video", id: 545519333
-mas "Scaler", id: 1612708557
 vscode "anbuselvanrocky.bootstrap5-vscode"
 vscode "bierner.emojisense"
 vscode "bierner.markdown-checkbox"
