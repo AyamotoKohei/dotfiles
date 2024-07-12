@@ -104,4 +104,9 @@
     },
     "typescript.updateImportsOnFileMove.enabled": "always",
     "markdown-pdf.headerTemplate": "<span class='title' style='display: none;'></span>",
+    "cSpell.userWords": [
+        "pexels",
+        "podcaster",
+        "Podcasters"
+    ],
 }
