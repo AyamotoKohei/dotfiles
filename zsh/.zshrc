@@ -27,7 +27,7 @@ zinit light zsh-users/zsh-completions
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-source ~/dotfiles/zsh/p10k/terminal/.p10k.zsh
+source ~/dotfiles/zsh/p10k/.p10k.zsh
 
 # Gitのタブ補完を有効化する
 autoload -Uz compinit && compinit
