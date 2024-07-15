@@ -29,6 +29,7 @@ cask "font-hack-nerd-font"
 cask "google-chrome"
 cask "google-drive"
 cask "google-japanese-ime"
+cask "jordanbaird-ice"
 cask "karabiner-elements"
 cask "notion"
 cask "pgadmin4"
@@ -56,6 +57,7 @@ mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
 mas "Parallels System Monitor", id: 6475592380
 mas "Prime Video", id: 545519333
+vscode "aaron-bond.better-comments"
 vscode "anbuselvanrocky.bootstrap5-vscode"
 vscode "bierner.emojisense"
 vscode "bierner.markdown-checkbox"
