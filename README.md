@@ -42,6 +42,10 @@ $ ln -s  ~/dotfiles/.vscode/settings.json ~/Library/Application\ Support/Code/Us
 
 # Warp テーマの有効化
 $ ln -s ~/dotfiles/.warp ~/.warp
+
+# Ghostty の設定ファイル
+$ rm -rf ~/Library/Application\ Support/com.mitchellh.ghostty/config
+$ ln -s ~/dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ```
 
 以上。
