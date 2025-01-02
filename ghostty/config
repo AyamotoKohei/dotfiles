@@ -1,6 +1,9 @@
 font-size = 14
 theme = "iceberg-dark"
-cursor-style = "block"
+
+cursor-opacity = 1
+cursor-style = block_hollow
+
 quick-terminal-position = "top"
 quick-terminal-screen = "main"
 quick-terminal-animation-duration = 0
