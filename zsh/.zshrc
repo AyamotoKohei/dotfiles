@@ -36,7 +36,11 @@ autoload -Uz compinit && compinit
 eval "$(gh completion -s zsh)"
 
 # asdf の設定
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # postgresql のパスの設定
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/kohei.ayamoto/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

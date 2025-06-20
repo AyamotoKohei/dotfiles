@@ -1,112 +1,126 @@
 {
-    "workbench.colorTheme": "Iceberg",
-    "editor.fontSize": 13,
-    "editor.renderWhitespace": "boundary",
-    "editor.suggestSelection": "first",
-    "editor.renderControlCharacters": true,
-    "editor.dragAndDrop": false,
-    "editor.wordWrap": "on",
-    "editor.minimap.maxColumn": 90,
-    "editor.minimap.showSlider": "always",
-    "editor.minimap.size": "fit",
-    "editor.formatOnType": true,
-    "editor.formatOnPaste": true,
-    "css.validate": false,
-    "less.validate": false,
-    "scss.validate": false,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit",
-        "source.fixAll.stylelint": "explicit"
+  "workbench.colorTheme": "Iceberg",
+  "editor.fontSize": 13,
+  "editor.renderWhitespace": "boundary",
+  "editor.suggestSelection": "first",
+  "editor.renderControlCharacters": true,
+  "editor.dragAndDrop": false,
+  "editor.wordWrap": "on",
+  "editor.minimap.maxColumn": 90,
+  "editor.minimap.showSlider": "always",
+  "editor.minimap.size": "fit",
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.codeActionsOnSave": {
+    "source.addMissingImport": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "editor.lineNumbers": "on",
+  "editor.rulers": [80],
+  "editor.formatOnSave": false,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "files.eol": "\n",
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "explorer.incrementalNaming": "smart",
+  "explorer.confirmDragAndDrop": false,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "[graphql]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
     },
-    "editor.lineNumbers": "on",
-    "editor.rulers": [
-        80
-    ],
-    "editor.formatOnSave": false,
-    "typescript.tsdk": "./node_modules/typescript/lib",
-    "files.eol": "\n",
-    "files.autoSave": "onFocusChange",
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "explorer.incrementalNaming": "smart",
-    "explorer.confirmDragAndDrop": false,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.formatOnSave": true,
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.formatOnSave": true,
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.formatOnSave": true,
-    },
-    "[css]": {
-        "editor.suggest.insertMode": "replace",
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.formatOnSave": true,
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.formatOnSave": true,
-    },
-    "[graphql]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.formatOnSave": true,
-    },
-    "[json]": {
-        "editor.quickSuggestions": {
-            "strings": true
-        },
-        "editor.suggest.insertMode": "replace",
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.formatOnSave": true,
-    },
-    "workbench.iconTheme": "material-icon-theme",
-    "vsicons.dontShowNewVersionMessage": true,
-    "workbench.startupEditor": "none",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-    "files.associations": {
-        ".env*": "dotenv"
-    },
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "scope": "keyword.other.dotenv",
-                "settings": {
-                    "foreground": "#FF000000"
-                }
-            }
-        ]
-    },
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "markdown-pdf.headerTemplate": "<span class='title' style='display: none;'></span>",
-    "cSpell.userWords": [
-        "pexels",
-        "podcaster",
-        "Podcasters"
-    ],
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.startupEditor": "none",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "files.associations": {
+    ".env*": "dotenv"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "markdown-pdf.headerTemplate": "<span class='title' style='display: none;'></span>",
+  "cSpell.userWords": [
+    "clsx",
+    "xsmall"
+  ],
+  "gitlens.rebaseEditor.ordering": "asc",
+  "security.promptForLocalFileProtocolHandling": false,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "gitlens.views.scm.grouped.views": {
+    "commits": true,
+    "branches": true,
+    "remotes": true,
+    "stashes": true,
+    "tags": true,
+    "worktrees": true,
+    "contributors": true,
+    "repositories": false,
+    "searchAndCompare": false,
+    "launchpad": true
+  },
+  "git.confirmSync": false,
 }
