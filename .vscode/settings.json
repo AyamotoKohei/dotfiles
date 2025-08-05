@@ -31,42 +31,6 @@
   "explorer.incrementalNaming": "smart",
   "explorer.confirmDragAndDrop": false,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true
-  },
-  "[css]": {
-    "editor.suggest.insertMode": "replace",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true
-  },
   "[graphql]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.insertSpaces": true,
@@ -103,10 +67,7 @@
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "markdown-pdf.headerTemplate": "<span class='title' style='display: none;'></span>",
-  "cSpell.userWords": [
-    "clsx",
-    "xsmall"
-  ],
+  "cSpell.userWords": ["clsx", "xsmall"],
   "gitlens.rebaseEditor.ordering": "asc",
   "security.promptForLocalFileProtocolHandling": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
@@ -123,4 +84,6 @@
     "launchpad": true
   },
   "git.confirmSync": false,
+  "biome.suggestInstallingGlobally": false,
+  "github.copilot.nextEditSuggestions.enabled": true
 }
