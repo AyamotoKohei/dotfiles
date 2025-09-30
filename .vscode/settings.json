@@ -48,7 +48,6 @@
     "editor.formatOnSave": true
   },
   "workbench.iconTheme": "material-icon-theme",
-  "vsicons.dontShowNewVersionMessage": true,
   "workbench.startupEditor": "none",
   "diffEditor.ignoreTrimWhitespace": false,
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
@@ -85,5 +84,8 @@
   },
   "git.confirmSync": false,
   "biome.suggestInstallingGlobally": false,
-  "github.copilot.nextEditSuggestions.enabled": true
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "gitlens.launchpad.indicator.enabled": false,
+  "git.autofetch": true,
+  "workbench.editor.enablePreview": false
 }
