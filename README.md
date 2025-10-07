@@ -34,7 +34,7 @@ $ brew bundle --global
 6. その他のファイルに関しても、適宜シンボリックリンクを貼る
 ```bash
 # Neovim の設定ファイル
-$ ln -s ~/dotfiles/nvim ~/.config
+$ ln -s ~/dotfiles/nvim ~/.config/nvim
 
 # VSCode の設定ファイル
 $ rm -rf ~/Library/Application\ Support/Code/User/settings.json
