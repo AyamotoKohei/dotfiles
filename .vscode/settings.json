@@ -1,59 +1,33 @@
 {
-  "workbench.colorTheme": "Iceberg",
-  "editor.fontSize": 13,
-  "editor.renderWhitespace": "boundary",
-  "editor.suggestSelection": "first",
-  "editor.renderControlCharacters": true,
-  "editor.dragAndDrop": false,
-  "editor.wordWrap": "on",
-  "editor.minimap.maxColumn": 90,
-  "editor.minimap.showSlider": "always",
-  "editor.minimap.size": "fit",
-  "editor.formatOnType": true,
-  "editor.formatOnPaste": true,
+  "cSpell.userWords": ["clsx", "xsmall"],
   "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.codeLens": true,
+  "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.codeActionsOnSave": {
+    "source.format.oxc": "always",
     "source.addMissingImport": "explicit",
     "source.fixAll.eslint": "explicit",
     "source.fixAll.stylelint": "explicit"
   },
-  "editor.lineNumbers": "on",
-  "editor.rulers": [80],
+  "editor.dragAndDrop": false,
+  "editor.fontSize": 13,
+  "editor.formatOnPaste": true,
   "editor.formatOnSave": false,
-  "typescript.tsdk": "./node_modules/typescript/lib",
-  "files.eol": "\n",
-  "files.autoSave": "onFocusChange",
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
-  "explorer.incrementalNaming": "smart",
-  "explorer.confirmDragAndDrop": false,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "[graphql]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnType": true,
+  "editor.lineNumbers": "on",
+  "editor.minimap.maxColumn": 90,
+  "editor.minimap.showSlider": "always",
+  "editor.minimap.size": "fit",
+  "editor.quickSuggestions": {
+    "strings": true
   },
-  "[json]": {
-    "editor.quickSuggestions": {
-      "strings": true
-    },
-    "editor.suggest.insertMode": "replace",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true
-  },
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "none",
-  "diffEditor.ignoreTrimWhitespace": false,
-  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-  "files.associations": {
-    ".env*": "dotenv"
-  },
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [80],
+  "editor.suggestSelection": "first",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -64,28 +38,66 @@
       }
     ]
   },
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "markdown-pdf.headerTemplate": "<span class='title' style='display: none;'></span>",
-  "cSpell.userWords": ["clsx", "xsmall"],
-  "gitlens.rebaseEditor.ordering": "asc",
-  "security.promptForLocalFileProtocolHandling": false,
-  "javascript.updateImportsOnFileMove.enabled": "never",
-  "gitlens.views.scm.grouped.views": {
-    "commits": true,
-    "branches": true,
-    "remotes": true,
-    "stashes": true,
-    "tags": true,
-    "worktrees": true,
-    "contributors": true,
-    "repositories": false,
-    "searchAndCompare": false,
-    "launchpad": true
+  "editor.wordWrap": "on",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.incrementalNaming": "smart",
+  "files.associations": {
+    ".env*": "dotenv"
   },
+  "files.autoSave": "onFocusChange",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
   "git.confirmSync": false,
-  "biome.suggestInstallingGlobally": false,
   "github.copilot.nextEditSuggestions.enabled": true,
   "gitlens.launchpad.indicator.enabled": false,
-  "git.autofetch": true,
-  "workbench.editor.enablePreview": false
+  "gitlens.rebaseEditor.ordering": "asc",
+  "gitlens.views.scm.grouped.views": {
+    "branches": true,
+    "commits": true,
+    "contributors": true,
+    "launchpad": true,
+    "remotes": true,
+    "repositories": false,
+    "searchAndCompare": false,
+    "stashes": true,
+    "tags": true,
+    "worktrees": true
+  },
+  "hediet.vscode-drawio.appearance": "dark",
+  "hediet.vscode-drawio.codeLinkActivated": false,
+  "hediet.vscode-drawio.resizeImages": null,
+  "hediet.vscode-drawio.theme": "kennedy",
+  "less.validate": false,
+  "markdown-pdf.headerTemplate": "<span class='title' style='display: none;'></span>",
+  "scss.validate": false,
+  "terminal.integrated.env.osx": {
+    "Q_NEW_SESSION": "1"
+  },
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "workbench.colorTheme": "Iceberg",
+  "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+  "chat.viewSessions.orientation": "stacked",
+  "githubPullRequests.pullBranch": "never",
+  "terraform.codelens.referenceCount": true,
+  "explorer.compactFolders": false,
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
+  },
+  "explorer.confirmDelete": false,
+  "githubPullRequests.createOnPublishBranch": "never",
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilotcli:",
+  "js/ts.experimental.useTsgo": true,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "js/ts.referencesCodeLens.enabled": true
 }
