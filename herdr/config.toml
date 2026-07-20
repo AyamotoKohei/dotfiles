@@ -1,0 +1,42 @@
+# TUI がカーソルを隠していても、IME が候補ウィンドウの位置を追えるように、フォーカスされたペインのカーソルを外部端末に公開。
+reveal_hidden_cursor_for_cjk_ime = true
+
+# 上記設定を適用するエージェントの名前を指定。
+cjk_ime_agents = ["claude", "codex", "cursor"]
+
+# IME 用に表示するカーソルの形状
+cjk_ime_cursor_shape = "steady_block"
+
+# prefix モード中に macOS の入力ソースを ASCII 対応のキーボードレイアウトに一時的に切り替える。
+switch_ascii_input_source_in_prefix = true
+
+# herdr-file-viewer: prefix+f で split 起動
+[[keys.command]]
+key = "prefix+f"
+type = "shell"
+command = "herdr plugin action invoke open-file-viewer --plugin herdr-file-viewer"
+description = "Open file viewer in split pane"
+
+# prefix+shift+f でタブ起動
+[[keys.command]]
+key = "prefix+shift+f"
+type = "shell"
+command = "herdr plugin action invoke open-file-viewer-tab --plugin herdr-file-viewer"
+description = "Open file viewer in new tab"
+
+# herdr-plugin-hunk: prefix+h で worktree diff
+[[keys.command]]
+key = "prefix+h"
+type = "shell"
+command = "herdr plugin action invoke hunk.diff.worktree-split"
+description = "Open worktree diff in split pane"
+
+[ui]
+agent_panel_sort = "spaces"
+
+[ui.toast]
+delivery = "system"
+delay_seconds = 1
+
+[ui.sound]
+enabled = true

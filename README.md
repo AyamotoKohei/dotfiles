@@ -46,7 +46,27 @@ $ ln -s ~/dotfiles/.warp ~/.warp
 # Ghostty の設定ファイル
 $ rm -rf ~/Library/Application\ Support/com.mitchellh.ghostty/config
 $ ln -s ~/dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
+
+# Herdr の設定ファイル
+$ mkdir -p ~/.config/herdr
+$ ln -s ~/dotfiles/herdr/config.toml ~/.config/herdr/config.toml
+$ herdr config check
+$ herdr server reload-config
 ```
+
+Herdr は `config.toml` のみを dotfiles で管理する。`session.json`、`plugins.json`、`plugins/`、ログ、ソケットは端末固有の実行時データのため管理しない。
+
+### Herdr プラグイン
+
+Herdr プラグインは `plugins.json` をコピーせず、CLI から再インストールする。
+
+```bash
+$ herdr plugin install edmundmiller/herdr-plugin-hunk --yes
+$ herdr plugin install smarzban/herdr-file-viewer --yes
+$ herdr plugin list
+```
+
+`--ref` を指定せずにインストールコマンドを再実行すると最新版へ更新される。バージョンを固定する場合は `--ref <タグまたはコミット>` を付ける。
 
 以上。
 
