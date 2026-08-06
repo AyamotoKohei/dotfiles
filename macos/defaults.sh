@@ -61,10 +61,28 @@ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
+# --- メニューバー ---
+
+# システム設定 > コントロールセンター > メニューバーのみを表示 > 時計のオプション
+# 秒を表示: オン / 曜日を表示: オン / 日付を表示: スペースがあるとき(0) /
+# 午前午後を表示: オン / 時刻の区切り記号を点滅: オン
+defaults write com.apple.menuextra.clock ShowSeconds -bool true
+defaults write com.apple.menuextra.clock ShowDayOfWeek -bool true
+defaults write com.apple.menuextra.clock ShowDate -int 0
+defaults write com.apple.menuextra.clock ShowAMPM -bool true
+defaults write com.apple.menuextra.clock FlashDateSeparators -bool true
+
+# システム設定 > コントロールセンター（BentoBox = コントロールセンターのメニューバーアイコン）
+defaults write com.apple.controlcenter "NSStatusItem Visible BentoBox" -bool true
+
+# メニューバーに VPN の状態を表示する（menu extra 方式のため配列ごと上書き）
+defaults write com.apple.systemuiserver menuExtras -array \
+  "/System/Library/CoreServices/Menu Extras/VPN.menu"
+
 # --- 反映 ---
 
 # 設定を読み込ませるため関連プロセスを再起動する（未起動でも失敗させない）
-for app in Dock Finder SystemUIServer; do
+for app in Dock Finder SystemUIServer ControlCenter; do
   killall "${app}" >/dev/null 2>&1 || true
 done
 

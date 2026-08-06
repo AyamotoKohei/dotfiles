@@ -39,6 +39,13 @@
 | Finder | `com.apple.finder ShowExternalHardDrivesOnDesktop` | `true` | 外部ディスクをデスクトップに表示 |
 | Finder | `com.apple.finder ShowHardDrivesOnDesktop` | `false` | 内蔵ディスクは表示しない |
 | Finder | `com.apple.finder ShowRemovableMediaOnDesktop` | `true` | リムーバブルメディアを表示 |
+| メニューバー | `com.apple.menuextra.clock ShowSeconds` | `true` | 時計に秒を表示 |
+| メニューバー | `com.apple.menuextra.clock ShowDayOfWeek` | `true` | 時計に曜日を表示 |
+| メニューバー | `com.apple.menuextra.clock ShowDate` | `0` | 日付は「スペースがあるとき」に表示 |
+| メニューバー | `com.apple.menuextra.clock ShowAMPM` | `true` | 午前/午後を表示 |
+| メニューバー | `com.apple.menuextra.clock FlashDateSeparators` | `true` | 時刻の区切り記号を点滅 |
+| メニューバー | `com.apple.controlcenter "NSStatusItem Visible BentoBox"` | `true` | コントロールセンターのアイコンを表示 |
+| メニューバー | `com.apple.systemuiserver menuExtras` | `VPN.menu` | VPN 状態アイコンを表示 |
 
 ## スクリプトの作り
 
