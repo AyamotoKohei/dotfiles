@@ -68,11 +68,17 @@ $ herdr plugin list
 
 `--ref` を指定せずにインストールコマンドを再実行すると最新版へ更新される。バージョンを固定する場合は `--ref <タグまたはコミット>` を付ける。
 
+7. macOS の設定（Dock・Finder・キーボード・トラックパッドなど）を適用する
+```bash
+$ ~/dotfiles/macos/defaults.sh
+```
+
+設定内容は [macos/defaults.sh](macos/defaults.sh) を参照。設定を変更したら手でこのスクリプトに反映する（自動 dump の仕組みはない）。
+
 以上。
 
 <!--
 ## 各種アプリケーションの設定
-### macOS
 ### ターミナル
 ### Warp -->
 
