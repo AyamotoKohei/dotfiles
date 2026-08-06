@@ -61,6 +61,11 @@ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
+# Finder > 設定 > 一般 > 新規Finderウインドウで次を表示: ホームフォルダ
+# （デフォルトの「最近の項目」を開かない。パスは実行ユーザーのホームから生成する）
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+
 # --- メニューバー ---
 
 # システム設定 > コントロールセンター > メニューバーのみを表示 > 時計のオプション

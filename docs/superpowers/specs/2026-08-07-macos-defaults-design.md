@@ -39,6 +39,8 @@
 | Finder | `com.apple.finder ShowExternalHardDrivesOnDesktop` | `true` | 外部ディスクをデスクトップに表示 |
 | Finder | `com.apple.finder ShowHardDrivesOnDesktop` | `false` | 内蔵ディスクは表示しない |
 | Finder | `com.apple.finder ShowRemovableMediaOnDesktop` | `true` | リムーバブルメディアを表示 |
+| Finder | `com.apple.finder NewWindowTarget` | `PfHm` | 新規ウインドウでホームフォルダを開く（「最近の項目」を開かない） |
+| Finder | `com.apple.finder NewWindowTargetPath` | `file://$HOME/` | 実行ユーザーのホームから生成 |
 | メニューバー | `com.apple.menuextra.clock ShowSeconds` | `true` | 時計に秒を表示 |
 | メニューバー | `com.apple.menuextra.clock ShowDayOfWeek` | `true` | 時計に曜日を表示 |
 | メニューバー | `com.apple.menuextra.clock ShowDate` | `0` | 日付は「スペースがあるとき」に表示 |
