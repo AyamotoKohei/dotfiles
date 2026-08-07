@@ -69,12 +69,6 @@ $ rm -rf ~/.config/cmux
 $ ln -s ~/dotfiles/cmux ~/.config/cmux
 ```
 
-Karabiner-Elements は設定保存時に `karabiner.json` をリネームで置き換えるため、ファイル単体ではなくディレクトリごとシンボリックリンクを貼る。`automatic_backups/` は実行時データのため管理しない。
-
-Claude Code は `~/.claude/` に履歴・セッション・キャッシュなどの実行時データを大量に置くため、ディレクトリごとではなく設定ファイル（`CLAUDE.md`・`settings.json`・`hooks/`・`commands/`）だけを個別にシンボリックリンクする。`skills/` は superpowers 由来のコピーと自作が混在するため管理対象外。
-
-cmux で管理するのはユーザー設定の `cmux.json` のみ。`~/.cmux/hooks/` は cmux 本体が自動生成するスクリプト、`~/Library/Application Support/cmux/` はセッション・ソケットなどの実行時データのため管理しない。
-
 Herdr は `config.toml` のみを dotfiles で管理する。`session.json`、`plugins.json`、`plugins/`、ログ、ソケットは端末固有の実行時データのため管理しない。
 
 ### Herdr プラグイン
