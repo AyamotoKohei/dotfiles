@@ -43,6 +43,23 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 # システム設定 > アクセシビリティ > ポインタコントロール > トラックパッドオプション > 3本指でドラッグ: オフ
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool false
 
+# システム設定 > トラックパッド > ポイントとクリック > 副ボタンのクリック: 2本指でクリックまたはタップ
+defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 0
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 0
+
+# システム設定 > トラックパッド > ポイントとクリック > 調べる&データ検出: 1本指で強めのクリック
+defaults write NSGlobalDomain com.apple.trackpad.forceClick -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 0
+
+# システム設定 > トラックパッド > ポイントとクリック > クリック: 中
+defaults write com.apple.AppleMultitouchTrackpad FirstClickThreshold -int 1
+defaults write com.apple.AppleMultitouchTrackpad SecondClickThreshold -int 1
+
+# システム設定 > トラックパッド > ポイントとクリック > 強めのクリックと触覚フィードバック: オン
+defaults write com.apple.AppleMultitouchTrackpad ForceSuppressed -bool false
+
 # --- Dock ---
 
 # システム設定 > デスクトップとDock > Dockを自動的に表示/非表示: オン
