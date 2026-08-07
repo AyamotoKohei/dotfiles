@@ -19,3 +19,6 @@ for entry in "${packages[@]}"; do
   done
   npx -y skills add "$repo" --global --agent '*' "${args[@]}" --yes
 done
+
+# agmsg は skills CLI ではなく専用のインストーラで導入する
+npx -y agmsg
