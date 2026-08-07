@@ -12,6 +12,13 @@ set -euo pipefail
 # システム設定 > 外観 > 外観モード: ダーク
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
+# システム設定 > アクセシビリティ > ディスプレイ > 透明度を下げる: オン
+# （メニューバー・Dock・各種パネルの透過をまとめて無効化する）
+# このドメインは TCC 保護されており、ターミナルにフルディスクアクセスがないと
+# 書き込めないため、失敗してもスクリプトを止めず警告だけ出す
+defaults write com.apple.universalaccess reduceTransparency -bool true 2>/dev/null \
+  || echo "警告: 「透明度を下げる」を書き込めませんでした。システム設定 > プライバシーとセキュリティ > フルディスクアクセスでターミナルを許可してから再実行してください。"
+
 # --- キーボード ---
 
 # システム設定 > キーボード > テキスト入力 > 入力ソース > 自動的に文を大文字にする: オン
