@@ -52,7 +52,13 @@ $ mkdir -p ~/.config/herdr
 $ ln -s ~/dotfiles/herdr/config.toml ~/.config/herdr/config.toml
 $ herdr config check
 $ herdr server reload-config
+
+# Karabiner-Elements の設定ファイル
+$ rm -rf ~/.config/karabiner
+$ ln -s ~/dotfiles/karabiner ~/.config/karabiner
 ```
+
+Karabiner-Elements は設定保存時に `karabiner.json` をリネームで置き換えるため、ファイル単体ではなくディレクトリごとシンボリックリンクを貼る。`automatic_backups/` は実行時データのため管理しない。
 
 Herdr は `config.toml` のみを dotfiles で管理する。`session.json`、`plugins.json`、`plugins/`、ログ、ソケットは端末固有の実行時データのため管理しない。
 
