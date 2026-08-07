@@ -87,6 +87,17 @@ defaults write com.apple.menuextra.clock FlashDateSeparators -bool true
 # システム設定 > コントロールセンター（BentoBox = コントロールセンターのメニューバーアイコン）
 defaults write com.apple.controlcenter "NSStatusItem Visible BentoBox" -bool true
 
+# システム設定 > コントロールセンター > メニューバーに表示する項目
+# モジュール設定はホスト固有のため -currentHost で書く。値は Apple 非公開の内部値
+# （18: メニューバーに常に表示、2: 使用可能な場合に表示）で、OS更新で変わる可能性がある。
+# Wi-Fi とバッテリーは OS 標準で表示されるため記述しない
+defaults -currentHost write com.apple.controlcenter Display -int 18
+defaults -currentHost write com.apple.controlcenter Sound -int 18
+defaults -currentHost write com.apple.controlcenter ScreenMirroring -int 2
+
+# システム設定 > コントロールセンター > バッテリー > 割合（%）を表示: オン
+defaults -currentHost write com.apple.controlcenter BatteryShowPercentage -bool true
+
 # メニューバーに VPN の状態を表示する（menu extra 方式のため配列ごと上書き）
 defaults write com.apple.systemuiserver menuExtras -array \
   "/System/Library/CoreServices/Menu Extras/VPN.menu"
