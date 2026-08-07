@@ -1,9 +1,6 @@
 # Shell 再起動時にエイリアスを読み込んで欲しいので記述
 source ~/.zprofile
 
-# バックグラウンドで ssh-agent を開始
-eval "$(ssh-agent -s)"
-
 # Homebrew のパスを通す
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
@@ -35,8 +32,8 @@ autoload -Uz compinit && compinit
 # GitHub CLIのコマンド補完の設定
 eval "$(gh completion -s zsh)"
 
-# asdf の設定
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+# mise の設定
+eval "$(mise activate zsh)"
 
 # postgresql のパスの設定
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"

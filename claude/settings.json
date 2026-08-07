@@ -1,5 +1,5 @@
 {
-  "model": "claude-fable-5[1m]",
+  "model": "opus[1m]",
   "hooks": {
     "SessionStart": [
       {
@@ -31,7 +31,14 @@
       }
     }
   },
+  "permissions": {
+    "allow": [
+      "Bash(~/.agents/skills/agmsg/scripts/*)",
+      "Bash(bash ~/.agents/skills/agmsg/scripts/*)"
+    ]
+  },
   "language": "日本語",
   "effortLevel": "high",
+  "advisorModel": "fable",
   "theme": "dark"
 }

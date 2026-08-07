@@ -101,5 +101,8 @@
   "js/ts.experimental.useTsgo": true,
   "js/ts.updateImportsOnFileMove.enabled": "always",
   "js/ts.referencesCodeLens.enabled": true,
-  "remote.autoForwardPortsSource": "hybrid"
+  "remote.autoForwardPortsSource": "hybrid",
+  "github.copilot.enable": {
+    "markdown": true
+  }
 }

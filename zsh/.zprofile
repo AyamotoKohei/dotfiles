@@ -20,3 +20,8 @@ alias glo='git log --oneline' # コミットログを各一行で読む
 alias mkpr='hub pull-request' # PRを書く
 alias prs='ghi | grep ↑' # 現在のレポジトリのPR取得
 alias gbm='git branch --merged | grep -v main' # main を除くマージ済みのブランチを取得
+
+# github MCP プラグインが参照。keyring から都度取得するのでトークンの平文は残さない
+__gh_token="$(gh auth token 2>/dev/null)"
+[ -n "$__gh_token" ] && export GITHUB_PERSONAL_ACCESS_TOKEN="$__gh_token"
+unset __gh_token
