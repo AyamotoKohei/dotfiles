@@ -82,6 +82,11 @@ $ herdr plugin list
 $ ~/dotfiles/macos/defaults.sh
 ```
 
+8. エージェント用スキルをインストールする
+```bash
+$ ~/dotfiles/skills/install.sh
+```
+
 以上。
 
 ## 各種アプリケーションの設定
