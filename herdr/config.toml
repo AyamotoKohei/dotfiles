@@ -1,3 +1,6 @@
+onboarding = false
+
+[experimental]
 # TUI がカーソルを隠していても、IME が候補ウィンドウの位置を追えるように、フォーカスされたペインのカーソルを外部端末に公開。
 reveal_hidden_cursor_for_cjk_ime = true
 

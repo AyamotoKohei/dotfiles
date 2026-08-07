@@ -44,3 +44,4 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/kohei.ayamoto/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+export PATH="$HOME/.local/bin:$PATH"

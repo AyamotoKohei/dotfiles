@@ -1,5 +1,4 @@
 {
-  "cSpell.userWords": ["clsx", "xsmall"],
   "css.validate": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.codeLens": true,
@@ -26,7 +25,9 @@
   },
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [80],
+  "editor.rulers": [
+    80
+  ],
   "editor.suggestSelection": "first",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -96,8 +97,9 @@
   "explorer.confirmDelete": false,
   "githubPullRequests.createOnPublishBranch": "never",
   "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilotcli:",
+  "gitlens.ai.vscode.model": "copilotcli:claude-sonnet-4.6",
   "js/ts.experimental.useTsgo": true,
   "js/ts.updateImportsOnFileMove.enabled": "always",
-  "js/ts.referencesCodeLens.enabled": true
+  "js/ts.referencesCodeLens.enabled": true,
+  "remote.autoForwardPortsSource": "hybrid"
 }
