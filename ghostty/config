@@ -7,6 +7,7 @@ cursor-style-blink = false
 
 font-family = JetBrains Mono
 font-family = Hiragino Kaku Gothic ProN
+font-feature = -dlig
 
 quick-terminal-position = top
 quick-terminal-screen = main
