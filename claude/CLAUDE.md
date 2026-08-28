@@ -50,5 +50,6 @@ KPI やカバレッジ目標が与えられたら、達成するまで試行す�
 
 # Git
 
+- プルリクを出すとき、レビュー単位が複数 PR に割れる機能開発は `stacking-prs` スキル（gh stack でのスタック PR 運用）に従う。単発修正は単一 PR
 - 対話 rebase は `GIT_SEQUENCE_EDITOR` に todo 書き換えスクリプトを渡して非対話で実行する
 - 統合ブランチが履歴書き換えされる運用で base..HEAD に他人のコミットが大量に見えたら、`git cherry` で patch 同値を確認してから `rebase --onto` 現 base で乗せ換える

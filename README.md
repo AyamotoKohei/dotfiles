@@ -87,6 +87,8 @@ $ ~/dotfiles/macos/defaults.sh
 $ ~/dotfiles/skills/install.sh
 ```
 
+`install.sh` は外部リポジトリ由来のスキルに加え、`skills/custom/` 配下の独自スキル（例: `stacking-prs`, `writing-code-comments`）を `~/.claude/skills/` と `~/.agents/skills/` へシンボリックリンクする。新しい独自スキルを追加するときは `skills/custom/<skill-name>/SKILL.md` を作成し、`install.sh` を再実行する。
+
 以上。
 
 ## 各種アプリケーションの設定
