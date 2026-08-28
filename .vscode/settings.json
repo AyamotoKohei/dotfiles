@@ -96,13 +96,12 @@
   },
   "explorer.confirmDelete": false,
   "githubPullRequests.createOnPublishBranch": "never",
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilotcli:claude-sonnet-4.6",
   "js/ts.experimental.useTsgo": true,
   "js/ts.updateImportsOnFileMove.enabled": "always",
   "js/ts.referencesCodeLens.enabled": true,
   "remote.autoForwardPortsSource": "hybrid",
   "github.copilot.enable": {
-    "markdown": true
+    "markdown": true,
+    "plaintext": true
   }
 }
