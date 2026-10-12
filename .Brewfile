@@ -1,8 +1,6 @@
 tap "carlocab/personal", trusted: true
 tap "localstack/tap", trusted: true
 tap "steipete/tap"
-# Extendable version manager with support for Ruby, Node.js, Erlang & more
-brew "asdf"
 # Securely store and access AWS credentials in development environments
 brew "aws-vault"
 # Microsoft Azure CLI 2.0
