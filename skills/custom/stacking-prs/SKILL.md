@@ -123,7 +123,7 @@ Teams commonly cut a version per merge into the integration branch (1 PR merge =
 ```
 ❌ Slice PRs based on the integration branch / letting the next slice retarget it after a bottom merge
 ✅ Slices merge into the layer below (ultimately the aggregate root). Once every slice is in,
-   open ONE PR feature/<ticket>-<slug> → <integration-branch> and merge it (the only version-bearing merge)
+   open ONE PR feature/<ticket>-<slug> → <integration-branch> and ready it; the user merges it (the only version-bearing merge)
 ```
 
 Create the integration PR after all slices have merged (the project's normal single-PR flow is fine). Its content is the set of already-reviewed slices, so its review is a cross-check, not a full re-read.
@@ -153,6 +153,7 @@ gh pr ready   # bottom slice only
   - **Local intentionally ahead by your own follow-up commits (already synced once):** `origin/<b>` must be an **ancestor** of `<b>` (`git merge-base --is-ancestor origin/<b> <b>`) and every commit in `<b>` not on origin must be yours; any origin-only commit = a third-party push.
   - Branches not yet on origin are fine in every state.
 - Merge with a merge commit (squash muddies `gh stack sync` history matching).
+- Every merge — slice → layer below and aggregate root → integration — is executed by the user. Stop at `gh pr ready` and report; never run `gh pr merge` / `gh stack merge` yourself.
 - Send one review-request when the stack is complete (the project's review channel). Include every PR link, bottom-up read order, and a one-line summary per PR.
 
 ## Known extension pitfalls (gh-stack extension v0.1.x, observed 2026-09-01)
@@ -188,5 +189,6 @@ Real-world traps in the extension itself, not covered by the official `gh-stack`
 - `gh stack sync` immediately after the integration branch was force-pushed
 - `submit`/`sync` without checking every stack branch for unintended divergence (local vs origin)
 - Ready uppers / squash merge
+- Running `gh pr merge` / `gh stack merge` yourself instead of handing the merge to the user
 
 **If any flag matches: stop that procedure and return to the ✅ above.**
