@@ -1,5 +1,9 @@
 {
   "model": "opus[1m]",
+  "env": {
+    "CLAUDE_CODE_THRIFTY_SONIC": "false",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "opus"
+  },
   "hooks": {
     "SessionStart": [
       {
@@ -36,6 +40,9 @@
       "Bash(~/.agents/skills/agmsg/scripts/*)",
       "Bash(bash ~/.agents/skills/agmsg/scripts/*)"
     ]
+  },
+  "attributes": {
+    "sessionUrl": false
   },
   "language": "日本語",
   "effortLevel": "high",
