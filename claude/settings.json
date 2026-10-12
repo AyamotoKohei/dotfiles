@@ -1,9 +1,9 @@
 {
-  "model": "opus[1m]",
   "env": {
     "CLAUDE_CODE_THRIFTY_SONIC": "false",
     "CLAUDE_CODE_SUBAGENT_MODEL": "opus"
   },
+  "model": "sonnet",
   "hooks": {
     "SessionStart": [
       {
@@ -11,7 +11,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash '/Users/kohei.ayamoto/.claude/hooks/herdr-agent-state.sh' session",
+            "command": "bash \"$HOME/.claude/hooks/herdr-agent-state.sh\" session",
             "timeout": 10
           }
         ]
@@ -35,17 +35,11 @@
       }
     }
   },
-  "permissions": {
-    "allow": [
-      "Bash(~/.agents/skills/agmsg/scripts/*)",
-      "Bash(bash ~/.agents/skills/agmsg/scripts/*)"
-    ]
-  },
-  "attributes": {
-    "sessionUrl": false
-  },
   "language": "日本語",
   "effortLevel": "high",
-  "advisorModel": "fable",
-  "theme": "dark"
+  "advisorModel": "opus",
+  "theme": "dark",
+  "attributes": {
+    "sessionUrl": false
+  }
 }
