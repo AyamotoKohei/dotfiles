@@ -42,3 +42,9 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 export PATH="/Users/kohei.ayamoto/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 export PATH="$HOME/.local/bin:$PATH"
+
+# グローバル textlint 設定 (~/.textlintrc.json) をどのリポジトリからでも使う
+textlint() {
+  NODE_PATH="$HOME/.textlint/node_modules${NODE_PATH:+:$NODE_PATH}" \
+    command textlint -c "$HOME/.textlintrc.json" "$@"
+}

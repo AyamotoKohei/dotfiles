@@ -1,3 +1,11 @@
+# The following lines were added by Docker Desktop to add commands to your PATH.
+export PATH="$PATH:/Users/kohei.ayamoto/.docker/bin"
+# End of Docker Desktop section.
+
+# pnpm global bin (textlint など)
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME/bin:$PATH"
+
 # エイリアスの設定
 alias ls='ls -lG'
 alias tree='tree -a'
