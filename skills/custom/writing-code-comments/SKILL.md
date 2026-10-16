@@ -1,6 +1,6 @@
 ---
 name: writing-code-comments
-description: Use when adding or editing code comments during implementation, fixes, or refactors — when tempted to explain a fix, a regression, or why a change is correct. Enforces Why-not-only comments (one line), test-name-no-duplication, and red-flag removal; move change narrative to commit messages.
+description: Use when adding or editing code comments or JSDoc during implementation, fixes, or refactors — when tempted to explain a fix, a regression, or why a change is correct. Enforces Why-not-only comments (one line), test-name-no-duplication, and red-flag removal; move change narrative to commit messages.
 ---
 
 # Code comment discipline
@@ -28,9 +28,18 @@ Before writing, ask: **"Does a post-merge reader of this code need this, or is i
 - **Justification (do not write)**: Change narrative, fix declarations, correctness arguments, plans to fix other files.
 - **Tests**: The test name states *what* is tested. Do not repeat it in prose comments.
 
+## Wording rules
+
+Apply these to every comment and JSDoc block you add:
+
+- **Own-repo contract terms only.** State the constraint in this repository's terms or the API contract (spec, types). Another repository's function names, file names, line numbers, and copied logic go stale silently when that side changes. Exception: a type's JSDoc may cite the API schema file it mirrors.
+- **One statement per fact.** The summary line, `@param`, and `@returns` each add what the others and the identifier name do not. A function's contract (return values, behavior on unset or invalid input, an input/output example) belongs in JSDoc; restating the name does not.
+- **One plain declarative sentence.** Write "X is avoided because Y" rather than a `Why not X:` label, and leave out emotive words and requests to the reader ("silently", "have them fix it").
+- **Settled wording stays.** Wording the user has confirmed is final; a hook notice or review feedback is not a reason to rewrite it.
+
 ## Anti-pattern → Preferred examples
 
-When refactoring a comment, choose **compress** or **delete**:
+When refactoring a comment, choose **compress** or **delete**. When unsure, delete; rewording is not a third option.
 
 - **Compress (pattern 1–3)**: A one-line Why-not constraint remains after removing narrative.
 - **Delete (pattern 4)**: Nothing worth keeping for a post-merge reader — only the change story or test-name duplication remains.
@@ -119,5 +128,8 @@ Test:
 - Fix declarations ("prevents …", "fixes …", "addresses …")
 - Test prose that repeats the test name
 - Block comments of three or more lines (Why-not fits in one line)
+- Another repository's function names, file names, or line numbers
+- JSDoc lines that restate another line or the identifier name
+- `Why not X:` labels and emotive wording
 
 **If any flag matches: delete the comment and move needed information to the commit message.**
