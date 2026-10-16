@@ -16,6 +16,29 @@
           }
         ]
       }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_input.file_path // empty'); case \"$f\" in *.md) out=$(NODE_PATH=\"$HOME/.textlint/node_modules\" \"$HOME/Library/pnpm/bin/textlint\" -c \"$HOME/.textlintrc.json\" \"$f\" 2>&1) || { echo \"$out\" >&2; exit 2; };; esac",
+            "timeout": 30,
+            "statusMessage": "textlintを実行中..."
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 '/Users/kohei.ayamoto/.claude/hooks/note-added-comments.py'",
+            "timeout": 10
+          }
+        ]
+      }
     ]
   },
   "enabledPlugins": {
