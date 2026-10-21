@@ -65,6 +65,17 @@ $ ln -s ~/dotfiles/claude/commands ~/.claude/commands
 # cmux の設定ファイル
 $ rm -rf ~/.config/cmux
 $ ln -s ~/dotfiles/cmux ~/.config/cmux
+
+# APM のユーザースコープ manifest（リンク後に apm install -g で復元）
+$ mkdir -p ~/.apm
+$ ln -s ~/dotfiles/apm/apm.yml ~/.apm/apm.yml
+$ ln -s ~/dotfiles/apm/apm.lock.yaml ~/.apm/apm.lock.yaml
+
+# textlint のグローバル設定とルール（リンク後に ~/.textlint で pnpm install --frozen-lockfile）
+$ mkdir -p ~/.textlint
+$ ln -s ~/dotfiles/textlint/.textlintrc.json ~/.textlintrc.json
+$ ln -s ~/dotfiles/textlint/package.json ~/.textlint/package.json
+$ ln -s ~/dotfiles/textlint/pnpm-lock.yaml ~/.textlint/pnpm-lock.yaml
 ```
 
 ### Herdr プラグイン

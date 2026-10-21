@@ -1,0 +1,15 @@
+name: kohei.ayamoto
+version: 1.0.0
+description: APM project for kohei.ayamoto
+author: AyamotoKohei-JTP
+# Which agent platforms to deploy to (uncomment to pin):
+# targets:
+#   - copilot
+#   - claude
+
+dependencies:
+  apm:
+    - nanaism/yomiyasu
+  mcp: []
+includes: auto
+scripts: {}
