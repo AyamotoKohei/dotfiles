@@ -128,6 +128,8 @@ Teams commonly cut a version per merge into the integration branch (1 PR merge =
 
 Create the integration PR after all slices have merged (the project's normal single-PR flow is fine). Its content is the set of already-reviewed slices, so its review is a cross-check, not a full re-read.
 
+The cross-check targets the **decisions** each slice made on its own — slices built in parallel by different people included: what each option shows or hides when its feature flag is off, defaults, how saved values are displayed. Before readying the integration PR, list these per sibling item (e.g. every toggle in one settings group) from the slices' commit messages, and resolve every item that differs from its siblings — one option hidden by its flag while the next is always shown — by aligning it or writing the reason in the PR body. Slice reviews cannot catch this: each slice is consistent on its own.
+
 ## Policy-bound commands
 
 Only commands tied to a policy above are listed here. Everything else (`add`, `sync`, `view --json`, exit codes, recovery) — follow the `gh-stack` skill.
