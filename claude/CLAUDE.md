@@ -29,26 +29,25 @@ KPI やカバレッジ目標が与えられたら、達成するまで試行す�
 - テストの警告・stderr を確認・検証するときは vitest に `--reporter=default` を付ける（理由: エージェント環境では既定の reporter が通過したテストの console 出力を省き、警告が出ていないように見える）
 - React の act 警告は、`--printConsoleTrace` で更新元のコンポーネントとハンドラを特定してから直す。`act` に渡すコールバックが Promise を返さないと、`await` しても同期の act になる（理由: 同じ警告文でも描画待ちとフォーカス残りなど原因が別で、`await act`・`findBy` では後者の警告が消えない）
 
-# 並列化と subagent
+# subagent と並列化
 
-タスクを受けたら最初に「**並列化できる subtask は何か**」「**subagent に投げて main context を空けられるか**」を洗い出してから動く。default は subagent 優先 / 並列優先。
+既定はメインループで進め、各ステップの結果を同じコンテキストに残す（理由: subagent の結果は要約で返るため詳細が落ち、呼び出すたびに入れ子のループ分だけ遅くなる）。
 
-判断:
+subagent に切り出すのは、他の文脈をほとんど必要とせず、短い結果だけ返せる作業に限る。切り分けは担当領域ではなく、必要なコンテキストで決める（理由: 担当領域で切ると、受け渡しのたびに情報が欠ける伝言ゲームになる）。
 
-- **互いに独立な 2+ task** → Agent tool で 1 message 内に並列 dispatch (independent search、 multi-scenario eval、 multi-model 比較など)
-- **大量探索・grep・解析 (3+ query 規模)** → `general-purpose` / `Explore` subagent に投げ、 main は要約だけ受け取る
-- **bias-free 評価** (skill / prompt / 自分の生成物の検証) → 新規 subagent。 「自分で再読」 は禁じ手 (`empirical-prompt-tuning` の caveat 通り)
-- **Long-running batch** (Bash の 10 分上限を超える / `apm install` を多 repo に回す等) → subagent dispatch か `run_in_background` + `Monitor`
+- **互いに独立した 2 つ以上の作業**（独立した調査、複数シナリオの評価など）→ 1 message 内で並列 dispatch し、終わったら捨てられるコンテキストで回す
+- **結論だけ要る広い探索** → `Explore` に投げる。見つかったコードを自分で読んで次の判断に使うなら、メインで読む
+- **bias-free な検証**（skill・prompt・自分の生成物）→ 新規 subagent に渡す。同じ context で自分が読み直しても検証にならない（`empirical-prompt-tuning` の注意点）
+- **長時間のバッチ**（Bash の 10 分上限を超える、`apm install` を多数のリポジトリに回すなど）→ `run_in_background` + `Monitor`、または subagent
 
-避けるべき:
+# エージェント向け文書の改善
 
-- 直列依存 (前 task の結果が次 task 入力) を無理に並列化する
-- 1-step / short lookup を subagent に投げる (overhead がコストに見合わない)
-- subagent と main で同じ作業を二重に実行する
+- スキル・CLAUDE.md・プロンプトを直すときは、変更前後を同じ評価で測り、一度に 1 つずつ変え、良くなったものだけ残す。合計点だけでなく、どのケースの結果が反転したかを見る
+- ルールを足す前に、既存のルールやスキルと矛盾・重複しないかを確認する。1 つの分岐でしか使わない手順や参照資料は、常時読み込む文書ではなくスキルや参照ファイルに置く（理由: 矛盾した指示は選択を誤らせ、常時読み込む量は毎ターンの注意を薄める）
 
 # スキルの使い分け
 
-- エージェント向け文書（スキル・CLAUDE.md・AGENTS.md）: 文面や構成を書く・直す → `writing-for-agents`。評価・ベンチマーク・description の起動精度の最適化 → `skill-creator`。frontmatter のキーや設定・フックなど Claude Code の仕様の事実確認 → `working-with-claude-code`
+- エージェント向け文書（スキル・CLAUDE.md・AGENTS.md）: 文面や構成を書く・直す → `writing-for-agents`。評価・ベンチマーク・description の起動精度の最適化 → `skill-creator`。frontmatter のキーや設定・フックなど Claude Code の仕様の事実確認 → `claude-code-guide` agent
 
 # コマンド実行
 
