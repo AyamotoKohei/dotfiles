@@ -53,6 +53,7 @@ subagent に切り出すのは、他の文脈をほとんど必要とせず、�
 # スキルの使い分け
 
 - エージェント向け文書（スキル・CLAUDE.md・AGENTS.md）: 文面や構成を書く・直す → `writing-for-agents`。評価・ベンチマーク・description の起動精度の最適化 → `skill-creator`。frontmatter のキーや設定・フックなど Claude Code の仕様の事実確認 → `claude-code-guide` agent
+- クライアント側の JS・HTML・CSS（React などのフレームワーク内を含む）を書く前 → `modern-web-guidance` で該当する Web API・実装パターンを検索する
 
 # コマンド実行
 
